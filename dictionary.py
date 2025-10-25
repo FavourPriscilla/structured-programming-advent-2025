@@ -1,28 +1,17 @@
-'''
-Dictionary is a collection of key-value pairs.
-
-Represented as {}
-
-Each key is unique and its mapped to a specific value.
-
-'''
-
-student = {
-    "name" : "Derrick",
-    "age" : 24,
-    'course' : "Information Technology",
+# A dictionary that stores the capitals of countries
+capitals = {
+    "France": "Paris",
+    "Japan": "Tokyo",
+    "Brazil": "Brasília",
+    "Canada": "Ottawa",
+    "Kenya": "Nairobi"
 }
 
-print(student)
+# Ask the user for a country
+country = input("Enter a country name: ")
 
-##access dictionary values
-#1. keys
-print(student["name"])
-
-##2. get method
-print(student.get("course"))
-
-##adding values to the dictionary
-student["university"] = "UCU" ##creating a new field
-student["age"] = 22   ## update on an existing field
-   ##updating an existing field
+# Look up the capital using the dictionary
+if country in capitals:
+    print(f"The capital of {country} is {capitals[country]}.")
+else:
+    print(f"Sorry, I don't know the capital of {country}.")
